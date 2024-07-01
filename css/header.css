@@ -1,0 +1,111 @@
+header#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  background: url(../misc/Chase_Atlantic_OBSESSIVE.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition: top 300ms ease;
+
+  z-index: 99;
+}
+
+header#header > div.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  backdrop-filter: blur(5px);
+  background-color: rgba(240, 41, 240, 0.5);
+
+  color: white;
+}
+header#header > div.content > h1.title {
+  font-size: clamp(1.75rem, -0.5rem + 6.4vw, 5rem);
+  text-shadow: 0 0 2px black, 0 0 10px white, 0 0 20px white, 0 0 30px white,
+    0 0 40px white, 0 0 50px white;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+header#header > div.content > h1.title > span {
+  animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  9% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  13% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  25% {
+    opacity: 1;
+  }
+}
+
+header#header > div.content > h1.title > img {
+  height: 10vw;
+  min-height: 50px;
+  aspect-ratio: 1;
+}
+header#header > div.content > p.desc {
+  max-width: 500px;
+  text-align: center;
+  text-shadow: 0 0 5px black, 0 0 10px white;
+}
+
+header#header > div.content > a.view-content:hover {
+  color: black;
+}
+header#header > div.content > a.view-content > i {
+  transform-origin: 50% 50%;
+  animation: jump 0.5s linear alternate infinite;
+}
+@keyframes jump {
+  0% {
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+  40% {
+    transform: translate3d(0, 30%, 0) scale3d(0.7, 1.5, 1);
+  }
+  100% {
+    transform: translate3d(0, 100%, 0) scale3d(1.5, 0.7, 1);
+  }
+}
+header#header > div.content > a.view-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: clamp(1.5rem, -0.5rem + 6.4vw, 2rem);
+  margin-top: 3rem;
+  text-shadow: 0 0 5px black, 0 0 10px white;
+  transition: all 300ms ease-in;
+  gap: 0.95rem;
+}

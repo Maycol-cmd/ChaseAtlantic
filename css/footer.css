@@ -1,0 +1,15 @@
+footer#footer {
+  background-color: rgb(240, 41, 240);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+footer#footer > a {
+  color: wheat;
+}
+footer#footer > a:hover {
+  color: aqua;
+}
